@@ -15,6 +15,14 @@ const RegistrationForm = ({ onRegister, onLogin }) => {
         });
     };
 
+    const handleRegistration = () => {
+        onRegister(form.username, form.email, form.password);
+    }
+
+    const handleLogin = () => {
+        onLogin(form.username, form.email, form.password);
+    }
+
     return (
         <div className={styles.container}>
             <h1 className={styles.shopTitle}>Kujira</h1>
@@ -31,8 +39,8 @@ const RegistrationForm = ({ onRegister, onLogin }) => {
                 <input className={styles.inputField} type="password" name="password" onChange={handleChange} />
             </div>
             <div className={styles.buttonContainer}>
-                <button type="button" onClick={onLogin} className={styles.button}>Log In</button>
-                <button type="button" onClick={onRegister} className={styles.button}>Register</button>
+                <button type="button" onClick={handleLogin} className={styles.button}>Log In</button>
+                <button type="button" onClick={handleRegistration} className={styles.button}>Register</button>
             </div>
         </div>
     );

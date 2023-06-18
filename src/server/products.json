@@ -1,0 +1,38 @@
+[
+    {
+        "id": 0,
+        "name": "Scotch",
+        "description": "Scotland whiskey",
+        "image": "logo.png"
+    },
+    {
+        "id": 1,
+        "name": "Vodka",
+        "description": "Russian water",
+        "image": "logo.png"
+    },
+    {
+        "id": 2,
+        "name": "Wine",
+        "description": "Mystery blood",
+        "image": "logo.png"
+    },
+    {
+        "id": 3,
+        "name": "Water",
+        "description": "As crystal as mirror",
+        "image": "logo.png"
+    },
+    {
+        "id": 4,
+        "name": "Beer",
+        "description": "Bid daddy",
+        "image": "logo.png"
+    },
+    {
+        "id": 5,
+        "name": "Shake",
+        "description": "Mixed onions",
+        "image": "logo.png"
+    }
+]
