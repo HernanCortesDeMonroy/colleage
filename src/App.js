@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import RegistrationForm from './Components/RegistrationForm.jsx';
 import Navbar from './Components/Navbar.jsx';
 import ProductsList from './Components/ProductList.jsx';
+import AdminPanel from './Components/AdminPanel.jsx';
 import './App.css';
 
 import { getUsers, addUser } from './server/app.js';
@@ -41,10 +42,20 @@ const App = () => {
     if (elegible) setShowForm(false);
   };
 
+  const handleAddProduct = () => {
+
+  }
+
   return (
     <div className='App'>
-      <Navbar onToggleForm={handleToggleForm} showForm={showForm} />
-      {showForm ? <RegistrationForm onRegister={handleRegister} onLogin={handleLogin} /> : <ProductsList />}
+       <Navbar onToggleForm={() => setShowForm(!showForm)} showForm={showForm} isAdmin={isAdmin} />
+      {showForm ? (
+        <RegistrationForm onRegister={handleRegister} onLogin={handleLogin} />
+      ) : isAdmin ? (
+        <AdminPanel onAddProduct={handleAddProduct} />
+      ) : (
+        <ProductsList />
+      )}
     </div>
   );
 };
